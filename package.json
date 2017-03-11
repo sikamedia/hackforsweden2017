@@ -14,7 +14,9 @@
   },
   "dependencies": {
     "vue": "^2.2.2",
-    "vue-router": "^2.2.0"
+    "vue-router": "^2.2.0",
+    "aws-sdk": "2.x",
+    "vuex": "2.x"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",

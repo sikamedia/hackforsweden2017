@@ -1,6 +1,10 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <h3>Increment:</h3>
+    <increment></increment>
+    <h3>Counter:</h3>
+    <counter></counter>
     <h2>Essential Links</h2>
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
@@ -21,13 +25,19 @@
 </template>
 
 <script>
-export default {
-  name: 'hello',
-  data () {
-    return {
-      msg: 'Welcome to Hack for Sweden 2017'
+  import Counter from './CounterDisplay.vue'
+  import Increment from './IncrementDecrementButton.vue'
+  export default {
+    name: 'hello',
+    data () {
+      return {
+        msg: 'Welcome to Hack for Sweden 2017'
+      }
+    },
+    components: {
+      Counter,
+      Increment
     }
-  }
 }
 </script>
 
