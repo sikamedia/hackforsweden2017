@@ -12,8 +12,7 @@
 </template>
 
 <script>
-  import Counter from './CounterDisplay.vue'
-  import Increment from './IncrementDecrementButton.vue'
+  import Demo from './demo.vue'
   export default {
     name: 'main',
     data () {
@@ -22,8 +21,7 @@
       }
     },
     components: {
-      Counter,
-      Increment
+      Demo
     }
 }
 </script>

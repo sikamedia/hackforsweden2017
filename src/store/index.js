@@ -6,7 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     counter: 0,
-    result: {}
+    result: {kommun: 'Lidingö', year: '2016', houseType: 'house'}
   },
   mutations: {
     INCREMENT (state) {
@@ -18,6 +18,9 @@ export default new Vuex.Store({
       } else {
         state.counter = 0
       }
+    },
+    PREDICTION (state) {
+
     }
   }
 })

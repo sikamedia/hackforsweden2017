@@ -1,23 +1,29 @@
 <template>
   <div class="demo">
     <h1>{{ msg }}</h1>
+    <CitySelection></CitySelection>
 
-
+    <footer>
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Idea</a></li>
       <li><a href="/about">About us</a></li>
       <li><a>Demo</a></li>
     </ul>
+    </footer>
   </div>
 </template>
 
 <script>
+  import CitySelection from './PredictionForm'
   export default {
     name: 'demo',
     data () {
       return {
         msg: 'Demo'
       }
+    },
+    components: {
+      CitySelection
     }
   }
 </script>
