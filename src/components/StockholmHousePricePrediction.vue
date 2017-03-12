@@ -6,7 +6,7 @@
     <ul>
       <li><a href="https://youtu.be/yAIg6c0ug1k" target="_blank">Idea</a></li>
       <li><a href="/about">About us</a></li>
-      <li><a href="https://gitter.im/vuejs/vue" target="_blank">Demo</a></li>
+      <li><a href="/demo" target="_blank">Demo</a></li>
     </ul>
   </div>
 </template>
