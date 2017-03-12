@@ -10,7 +10,7 @@
   export default {
     computed: {
       kummun () {
-        return store.state.result.kummun
+        return store.state.result.kommun
       }
     }
   }

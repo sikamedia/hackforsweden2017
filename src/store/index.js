@@ -19,8 +19,8 @@ export default new Vuex.Store({
         state.counter = 0
       }
     },
-    PREDICTION (state) {
-
+    PREDICTION (state, test) {
+      state.result.kommun = test
     }
   }
 })

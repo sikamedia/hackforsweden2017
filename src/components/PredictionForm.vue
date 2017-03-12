@@ -60,7 +60,7 @@
     methods: {
       predict: function () {
         console.log('clicked predict')
-        store.commit('INCREMENT')
+        store.commit('PREDICTION', 'sos')
       }
     },
     components: {
