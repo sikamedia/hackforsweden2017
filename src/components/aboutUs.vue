@@ -9,7 +9,7 @@
         </article>
       </li>
       <li>
-        <h2>Hongyi Liu,&nbsp&nbspPh.D KTH,  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspliuhongyi5566@gmail.com</h2>
+        <h2>Hongyi Liu, Ph.D KTH, liuhongyi5566@gmail.com</h2>
       </li>
     </ul>
     <ul>
@@ -29,16 +29,9 @@
         </article>
       </li>
       <li>
-        <h2>Jie Wen, &nbsp&nbsp&nbsp&nbspM.Sc. Actuary,  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp wjroom@hotmail.com</h2>
+        <h2>Jie Wen, M.Sc. Actuary, wjroom@hotmail.com</h2>
       </li>
     </ul>
-    <footer>
-      <ul>
-        <li><a href="https://youtu.be/yAIg6c0ug1k" target="_blank">Idea</a></li>
-        <li><a>About us</a></li>
-        <li><a href="/demo">Demo</a></li>
-      </ul>
-    </footer>
   </div>
 </template>
 
@@ -72,4 +65,5 @@
   a {
     color: #42b983;
   }
+
 </style>
