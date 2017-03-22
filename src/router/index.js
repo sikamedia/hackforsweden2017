@@ -4,6 +4,7 @@ import realEstatePricePrediction from '@/components/StockholmHousePricePredictio
 import aboutUs from '@/components/aboutUs'
 import PageNotFound from '@/components/PageNotFound'
 import demo from '@/components/demo'
+import LoanPrediction from '@/components/loan/LoanPrediction'
 
 Vue.use(Router)
 export default new Router({
@@ -23,6 +24,11 @@ export default new Router({
       path: '/demo',
       name: 'Demo',
       component: demo
+    },
+    {
+      path: '/binary_prediction_demo',
+      name: 'Prediction demo',
+      component: LoanPrediction
     },
     { path: '*',
       name: 'Page Not Found',

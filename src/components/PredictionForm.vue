@@ -24,7 +24,7 @@
         <span>House Selected: {{ houseTypeSelected }}</span>
         <li>
         <li>
-          <button @click.prevent="predict">Predict</button>
+          <b-button type="button" size='sm' variant="primary" v-on:click="predict">Predict</b-button>
         </li>
       </ul>
       <predictionDisplay></predictionDisplay>
@@ -35,6 +35,30 @@
 <script>
   import store from '../store'
   import predictionDisplay from './PredictionDisplay'
+  import AWSServices from '@/lib/aws'
+  const aws = new AWSServices('ml-CI66XJDYBUQ', {
+    CoApplication: '0',
+    AppTypeId: '2',
+    Age: '37',
+    Gender: 'F',
+    EmploymentTypeId: '1',
+    MonthsEmployed: '129',
+    MaritalStatusId: '2',
+    Children: '2',
+    MonthlyIncome: '25417',
+    ResidenceTypeId: '3',
+    Rent: '7100',
+    AnnualIncome: '295100',
+    LostId: '0',
+    TradeBan: '0',
+    AmountApplied: '14000',
+    LoanAmount: '0',
+    MonthlyMortgageCost: '0',
+    MonthlyLoanCost: '0',
+    monthlyRemained: '2967',
+    paymentRemark: '0',
+    previousEnquiry: '1'
+  })
   export default {
     name: 'PredictionForm',
     data () {
@@ -61,16 +85,14 @@
     },
     methods: {
       predict: function (e) {
-        console.log(this.kommunSelected)
-        console.log('clicked predict')
-        console.log('This is inpout:', this.kommunSelected, this.yearSelected, this.houseTypeSelected)
+        console.log(e)
+        console.log(aws.binaryPredictionResult())
         store.commit('PREDICTION', {'kommun': this.kommunSelected, 'year': this.yearSelected, 'houseType': this.houseTypeSelected})
       }
     },
     components: {
       predictionDisplay
     }
-
   }
 </script>
 

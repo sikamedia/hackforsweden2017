@@ -5,7 +5,6 @@
 </template>
 
 <script>
-  //  import eventHub from './EventHub'
   import store from '../store'
   export default {
     computed: {

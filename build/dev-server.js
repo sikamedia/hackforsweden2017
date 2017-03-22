@@ -13,6 +13,7 @@ var proxyMiddleware = require('http-proxy-middleware')
 var webpackConfig = process.env.NODE_ENV === 'testing'
   ? require('./webpack.prod.conf')
   : require('./webpack.dev.conf')
+var AWSServices = require('../services/aws')
 
 // default port where dev server listens for incoming traffic
 var port = process.env.PORT || config.dev.port
@@ -24,6 +25,36 @@ var proxyTable = config.dev.proxyTable
 
 var app = express()
 var compiler = webpack(webpackConfig)
+
+//ASW service
+app.get('/aws', function (req, res) {
+  console.log("This is a test for AWS!!!")
+
+  console.log(AWSServices.binaryPredictionResult('ml-CI66XJDYBUQ', {
+    CoApplication: '0',
+    AppTypeId: '2',
+    Age: '37',
+    Gender: 'F',
+    EmploymentTypeId: '1',
+    MonthsEmployed: '129',
+    MaritalStatusId: '2',
+    Children: '2',
+    MonthlyIncome: '25417',
+    ResidenceTypeId: '3',
+    Rent: '7100',
+    AnnualIncome: '295100',
+    LostId: '0',
+    TradeBan: '0',
+    AmountApplied: '14000',
+    LoanAmount: '0',
+    MonthlyMortgageCost: '0',
+    MonthlyLoanCost: '0',
+    monthlyRemained: '2967',
+    paymentRemark: '0',
+    previousEnquiry: '1'
+  }))
+  res.send('Hello World!!')
+})
 
 var devMiddleware = require('webpack-dev-middleware')(compiler, {
   publicPath: webpackConfig.output.publicPath,
