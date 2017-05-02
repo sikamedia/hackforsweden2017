@@ -1,37 +1,37 @@
 <template>
   <div class="aboutUs">
     <h1>{{ msg }}</h1>
+    <div>
+    </div>
+    <div>
 
-    <ul>
-      <li>
-        <article>
-          <img src="/static/profile/Hongyi.jpg" alt="Hong Yi">
-        </article>
-      </li>
-      <li>
-        <h2>Hongyi Liu, Ph.D KTH, liuhongyi5566@gmail.com</h2>
-      </li>
-    </ul>
-    <ul>
-      <li>
-        <article>
-          <img src="/static/profile/taowan.jpg" alt="Tao Wan" height="200" width="200">
-        </article>
-      </li>
-      <li>
-        <h2>Tao Wan, Solution Architect, simonwantao@yahoo.com</h2>
-      </li>
-    </ul>
-    <ul>
-      <li>
-        <article>
-          <img src="/static/profile/JieWen.png" alt="Tao Wan" height="200" width="200">
-        </article>
-      </li>
-      <li>
-        <h2>Jie Wen, M.Sc. Actuary, wjroom@hotmail.com</h2>
-      </li>
-    </ul>
+    </div>
+    <table id="team" align="center" cellspacing="10">
+      <tr>
+        <td>
+          <article>
+            <img src="/static/profile/Hongyi.jpg" alt="Hong Yi" height="200" width="200">
+          </article>
+        </td>
+        <td><h2>Hongyi Liu, Ph.D KTH, liuhongyi5566@gmail.com</h2></td>
+      </tr>
+      <tr>
+        <td>
+          <article>
+            <img src="/static/profile/taowan.jpg" alt="Tao Wan" height="200" width="200">
+          </article>
+        </td>
+        <td><h2>Tao Wan, Solutions Architect, simonwantao@yahoo.com</h2></td>
+      </tr>
+      <tr>
+        <td>
+          <article>
+            <img src="/static/profile/JieWen.png" alt="Tao Wan" height="200" width="200">
+          </article>
+        </td>
+        <td><h2>Jie Wen, M.Sc. Actuary, wjroom@hotmail.com</h2></td>
+      </tr>
+    </table>
   </div>
 </template>
 
@@ -66,4 +66,14 @@
     color: #42b983;
   }
 
+  table#team {
+    border-collapse: separate;
+    border-spacing: 0 20px;
+    border: 0;
+  }
+
+  td {
+    padding: 0 20px;
+    text-align: left;
+  }
 </style>
